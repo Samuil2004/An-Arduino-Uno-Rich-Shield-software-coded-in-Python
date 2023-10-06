@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Opening page</title>
+        <meta http-equiv="refresh" content="1">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Light Level Samples</h1>
+            <table>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Light level (W/m^2)</th>
+                </tr>
+                {% for sam in sample %}
+                <tr>
+                    <td>{{ sam[0] }}</td>
+                    <td>{{ sam[1] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+
+<!-- 
+
+            <h1>Measurement Dashboard</h1>
+            <p>Time: <span id="time">{{ time }}</span></p>
+            <p>Light Level: <span id="light-level">{{ light_level }}</span> W/m^2</p>
+            <h1>Volunteers</h1>
+            {% if volunteers == [] %}
+                <p>No volunteers at the moment</p>
+            {%else%}
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th></th>
+                        <th>Age</th>
+                    </tr>
+                    {%for (name,age) in volunteers%}
+                        <tr>
+                            <td>{{ loop.subpointA }}.</td>
+                            <td>{{ name }}</td>
+                            <td>-</td>
+                            <td>
+                                {{ age }}
+                                {% if loop.subpointA %}.{% else %}, {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% endif %}
+        </div> -->
+
+        <!-- <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                text-align: center;
+            }
+            .container {
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                display: inline-block;
+            }
+            h1 {
+                color: #333;
+            }
+            p {
+                font-size: 24px;
+                color: #34c48a;
+            }
+        </style> -->
+
+    </body>
+</html>
