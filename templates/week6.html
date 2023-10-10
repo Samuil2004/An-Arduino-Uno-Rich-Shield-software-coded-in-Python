@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Opening page</title>
+        <!-- <meta http-equiv="refresh" content="1"> -->
+    </head>
+    <body>
+        <div class="container">
+            <h1>Light Level Samples</h1>
+            <table>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Temperature</th>
+                </tr>
+                {% for sam in sample %}
+                <tr>
+                    <td>{{ sam [0] }}</td>
+                    <td>{{ sam [1] }}</td>
+
+                </tr>
+                {% endfor %}
+            </table>
+    </body>
+</html>

@@ -13,7 +13,7 @@ max_samples = 15
 
 def current_time():
     current_time = datetime.datetime.now()
-    ftime = current_time.strftime("%H:%M:%S")
+    ftime = current_time.strftime("%m/%d/%Y, %H:%M:%S")
     return ftime
 
 def light_level_measurement():

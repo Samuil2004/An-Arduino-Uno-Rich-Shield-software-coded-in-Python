@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Opening page</title>
+        <meta http-equiv="refresh" content="1">
+        <style>
+            /* Add CSS style for table cells to add space */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                padding: 8px; /* Adjust the amount of space as needed */
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Temperature Data</h1>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Temperature</th>
+                    <th>Average Temperature</th>
+                </tr>
+                {% for sam in sample %}
+                <tr>
+                    <td>{{  sam [0] }}</td>
+                    <td>{{  sam [1] }}</td>
+                    <td>{{  sam [2] }}</td>
+                    {% if loop.index == 1 %}
+                        <td>{{ average }}</td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
+    </body>
+</html>
