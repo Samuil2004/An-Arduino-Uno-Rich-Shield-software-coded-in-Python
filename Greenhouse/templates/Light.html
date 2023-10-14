@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Opening page</title>
+        <meta http-equiv="refresh" content="1">
+        <style>
+            body {
+                background-color: #f0f0f0;
+                font-family: Arial, sans-serif;
+            }
+    
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+            }
+    
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 20px;
+            }
+    
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+    
+            h1, h2 {
+                text-align: center;
+            }
+    
+            button {
+                display: block;
+                margin: 20px auto;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            /* Style the button on hover */
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Light Data</h1>
+            <h2>Sensor ID: i527531</h2>
+            <table>
+                <tr>
+                    <th>Average</th>
+                    <th>Minimum</th>
+                    <th>Maximum °C</th>
+                </tr>
+                <tr>
+                    <td>{{  average }}</td>
+                    <td>{{  mintemp }}</td>
+                    <td>{{  maxtemp }}</td>               
+                </tr>
+            </table>
+            <a href="/"><button>Back</button></a>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Opening page</title>
+        <meta http-equiv="refresh" content="1">
+        <style>
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                padding: 8px; 
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>GreenHouse Data</h1>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Temperature °C</th>
+                    <th>Humidity</th>
+                    <th>Light</th>
+
+                </tr>
+                {% for sam in temperature_data %}
+                <tr>
+                    <td>{{  sam [0] }}</td>
+                    <td>{{  sam [1] }}</td>
+                    <td>{{  sam [2] }}</td>
+                    <td>{{  sam [3] }}</td>
+                    <td>{{  sam [4] }}</td>
+<!-- 
+                    {% if loop.index == 1 %}
+                        <td>{{  average  }}</td>
+                    {% endif %}                  -->
+                </tr>
+                {% endfor %}
+            </table>
+    </body>
+</html>

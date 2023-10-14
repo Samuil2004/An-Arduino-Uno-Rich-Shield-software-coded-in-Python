@@ -3,7 +3,7 @@ import datetime
 import random
 import time
 import requests
-
+# 
 columns = ["Date" '\t''\t' "Time" '\t''\t'  "Temperature in °C"]
 sample_list = []
 listlen = 15

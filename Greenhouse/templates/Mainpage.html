@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Opening page</title>
+        <meta http-equiv="refresh" content="1">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+    
+            .container {
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                text-align: center;
+            }
+    
+            h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+    
+            h2 {
+                font-size: 18px;
+                color: #555;
+            }
+    
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin-top: 20px;
+            }
+    
+            th, td {
+                padding: 12px;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+            }
+    
+            th {
+                background-color: #007bff;
+                color: #fff;
+            }
+    
+            td {
+                background-color: #f9f9f9;
+            }
+    
+            button {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 20px;
+                margin-top: 20px;
+                cursor: pointer;
+            }
+    
+            button:hover {
+                background-color: #0056b3;
+            }
+    
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>GreenHouse Data</h1>
+            <h2>Sensor ID: i527531</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Temperature °C</th>
+                    <th>Humidity</th>
+                    <th>Light</th>
+                    <th>Average Temperature</th>
+
+                </tr>
+                {% for sam in temperature_data %}
+                <tr>
+                    <td>{{  sam [0] }}</td>
+                    <td>{{  sam [1] }}</td>
+                    <td>{{  sam [2] }}</td>
+                    <td>{{  sam [3] }}</td>
+                    <td>{{  sam [4] }}</td>
+
+                    {% if loop.index == 1 %}
+                        <td>{{  average  }}</td>
+                    {% endif %}                 
+                </tr>
+                {% endfor %}
+            </table>
+            <a href="Temperatures.html"><button>Temperature Data</button></a>
+            <a href="Humidity.html"><button>Humidity Data</button></a>
+            <a href="Light.html"><button>Light Data</button></a>
+
+
+        </div>
+    </body>
+</html>
