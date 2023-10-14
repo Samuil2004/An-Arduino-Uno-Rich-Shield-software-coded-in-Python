@@ -3,13 +3,13 @@
         <title>Opening page</title>
         <meta http-equiv="refresh" content="1">
         <style>
-            /* Add CSS style for table cells to add space */
+
             table {
                 border-collapse: collapse;
                 width: 100%;
             }
             th, td {
-                padding: 8px; /* Adjust the amount of space as needed */
+                padding: 8px; 
                 text-align: left;
                 border-bottom: 1px solid #ddd;
             }
@@ -22,19 +22,37 @@
                 <tr>
                     <th>Date</th>
                     <th>Time</th>
-                    <th>Temperature</th>
-                    <th>Average Temperature</th>
+                    <th>Temperature °C</th>
+                    <th>Average Temperature in °C</th>
                 </tr>
-                {% for sam in sample %}
+                {% for sam in temperature_data %}
                 <tr>
                     <td>{{  sam [0] }}</td>
                     <td>{{  sam [1] }}</td>
                     <td>{{  sam [2] }}</td>
                     {% if loop.index == 1 %}
-                        <td>{{ average }}</td>
-                    {% endif %}
+                        <td>{{  average  }}</td>
+                    {% endif %}                 
                 </tr>
                 {% endfor %}
             </table>
     </body>
-</html>
+</html> 
+
+
+       
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Data</title>
+</head>
+<body>
+    <h1>Temperature Data</h1>
+    <ul>
+        {% for item in temperature_data %}
+            <li>Temperature: {{ item[2] }}, Timestamp: {{ item[0] }} {{ item[1] }}/li>
+        {% endfor %}
+    </ul>
+</body>
+</html>        -->
